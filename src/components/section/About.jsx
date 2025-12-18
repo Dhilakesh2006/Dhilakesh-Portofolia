@@ -14,24 +14,26 @@ export const About = () => {
   ];
 
   return (
+     <LoadingOnScreen>
     <section
       id="about"
       className="min-h-screen flex items-center justify-center py-20"
     >
-      <LoadingOnScreen>
+     
         <div className="max-w-3xl mx-auto px-4">
 
        
         <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-3xl font-bold mb-6 text-center
-           from-blue-500 to-cyan-400 bg-clip-text text-transparent"
-        >
-          About Me
-        </motion.h2>
+  initial={{ opacity: 0, y: -20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+  className="text-3xl font-bold mb-6 text-center
+  bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent"
+>
+  About Me
+</motion.h2>
+
 
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -170,8 +172,9 @@ export const About = () => {
         </motion.div>
       </div>
 
-      </LoadingOnScreen>
+     
       
     </section>
+     </LoadingOnScreen>
   );
 };

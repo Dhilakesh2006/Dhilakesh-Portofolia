@@ -34,7 +34,17 @@ export const Project = () => {
     <section id="projects" className="py-20">
       <LoadingOnScreen>
 
-         <h2 className="text-3xl font-bold mb-10">Featured Projects</h2>
+       
+        <motion.h2
+  initial={{ opacity: 0, y: -20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+  className="text-3xl font-bold mb-6 text-center
+  bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent"
+>
+  Feautured Projects
+</motion.h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((p, i) => (

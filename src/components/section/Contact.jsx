@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { LoadingOnScreen } from "../LoadingOnScreen";
 import emailjs from "emailjs-com";
-
+import { motion } from "framer-motion";
 export const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -30,7 +30,17 @@ export const Contact = () => {
   return (
     <section id="contact" className="py-20">
       <LoadingOnScreen>
-        <h2 className="text-3xl font-bold mb-10">Get in Touch</h2>
+       
+        <motion.h2
+  initial={{ opacity: 0, y: -20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+  className="text-3xl font-bold mb-6 text-center
+  bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent"
+>
+  Get In Touch
+</motion.h2>
 
         <div className="max-w-xl mx-auto p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur shadow-lg">
           <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
