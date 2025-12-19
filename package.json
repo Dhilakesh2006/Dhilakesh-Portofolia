@@ -1,6 +1,6 @@
 {
   "name": "project",
-  "homepage": "https://Dhilakesh2006.github.io/MY-Portofolia/",
+  "homepage": "https://Dhilakesh2006.github.io/Dhilakesh-Portofolio/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,10 +8,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
-
+    "preview": "vite preview"
+  
   },
   "dependencies": {
     "emailjs-com": "^3.2.0",
